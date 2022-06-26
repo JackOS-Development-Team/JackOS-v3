@@ -1,0 +1,19 @@
+class Pointer {
+	field Array pointer;
+	
+	constructor Pointer new(int addr) {
+		let pointer = addr;
+		return Pointer;
+	}
+	
+	method void dispose() {
+		do Memory.free(this);
+	}
+	
+	method int getData() {
+		return pointer[0];
+	}
+	method void setData(int dat) {
+		let pointer[0] = dat;
+	}
+}
